@@ -1,0 +1,229 @@
+.TimeAndLocationWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: #fff;
+}
+
+.Group {
+  display: flex;
+  flex-direction: column;
+}
+
+.IntroduceWrapper {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.IntroduceWrapper img {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+}
+
+.TimeWrapper {
+  display: flex;
+  align-items: flex-end;
+}
+
+.MainButton {
+  display: flex;
+  gap: 13px;
+  justify-content: flex-end;
+  align-items: center;
+  width: 146px;
+  height: 56px;
+  border-radius: 28px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.MainButton > span {
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 5px;
+  font-weight: bold;
+  color: #999999;
+  text-align: end;
+}
+
+.MainButton > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  background-color: #303030;
+  margin-right: 4px;
+}
+
+@media (min-width: 200px) {
+  .TimeAndLocationWrapper {
+    flex-direction: column;
+    gap: 48px;
+    align-items: flex-start;
+  }
+  .IntroduceWrapper h1 {
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 3px;
+    font-weight: 200;
+  }
+  .TextToHide {
+    display: none;
+  }
+  .TimeWrapper h2 {
+    font-size: 100px;
+    font-weight: bold;
+    line-height: 100px;
+    letter-spacing: -2.5px;
+  }
+
+  .TimeWrapper h3 {
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 28px;
+  }
+  .Location {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 28px;
+    letter-spacing: 3px;
+    margin-top: 16px;
+    text-transform: uppercase;
+  }
+  .MainButton {
+    width: 115px;
+    height: 39px;
+    gap: 15px;
+    cursor: pointer;
+  }
+
+  .MainButton > span {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 2.9px;
+  }
+
+  .MainButton > div {
+    width: 32px;
+    height: 32px;
+    margin-right: 4px;
+  }
+  .MainButton > div > img {
+    width: 14px;
+    height: 9px;
+  }
+}
+
+@media (min-width: 620px) {
+  .TimeAndLocationWrapper {
+    flex-direction: column;
+    gap: 80px;
+    align-items: flex-start;
+  }
+  .IntroduceWrapper h1 {
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 3.6px;
+    font-weight: 200;
+  }
+  .TextToHide {
+    display: inline-block;
+  }
+  .TimeWrapper h2 {
+    font-size: 175px;
+    font-weight: bold;
+    line-height: 175px;
+    letter-spacing: -4.38px;
+  }
+
+  .TimeWrapper h3 {
+    font-size: 32px;
+    font-weight: lighter;
+    line-height: 28px;
+  }
+  .Location {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 28px;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .MainButton {
+    display: flex;
+    gap: 13px;
+    justify-content: flex-end;
+    align-items: center;
+    width: 146px;
+    height: 56px;
+    border-radius: 28px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+  }
+
+  .MainButton > span {
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    color: #999999;
+    text-align: end;
+  }
+
+  .MainButton > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: #303030;
+    margin-right: 4px;
+  }
+}
+@media (min-width: 1050px) {
+  .IntroduceWrapper h1 {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 4px;
+    font-weight: 200;
+  }
+  .TimeWrapper h2 {
+    font-size: 200px;
+    font-weight: bold;
+    line-height: 200px;
+    letter-spacing: -5px;
+  }
+
+  .TimeWrapper h3 {
+    font-size: 40px;
+    font-weight: lighter;
+    line-height: 28px;
+  }
+  .TimeAndLocationWrapper {
+    flex-direction: row;
+    gap: 0;
+    align-items: flex-end;
+  }
+  .Location {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 28px;
+    letter-spacing: 4.8px;
+    text-transform: uppercase;
+  }
+}
+
+@media (hover: hover) {
+  .MainButton:hover > div {
+    background-color: #999999;
+  }
+}

@@ -1,0 +1,138 @@
+.MoreDetailsWrapper {
+  height: 50vh;
+  width: 100%;
+  padding: 74px 165px 74px 165px;
+  backdrop-filter: blur(10px);
+  background-image: url('../../assets/desktop/BlurBackground.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Group {
+  display: flex;
+  color: #303030;
+}
+
+@media (min-width: 200px) {
+  .MoreDetailsWrapper {
+    padding: 48px 0 48px 0;
+  }
+  .Group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: #303030;
+  }
+  .SubGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 80%;
+  }
+
+  .SubGroupOne {
+    width: 80%;
+    margin-right: 0;
+  }
+
+  .DataGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .DataGroup h1 {
+    font-size: 10px;
+    line-height: 28px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .DataGroup h2 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 620px) {
+  .MoreDetailsWrapper {
+    padding: 119px 64px 119px 64px;
+  }
+    .Group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    color: #303030;
+  }
+  .SubGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .SubGroupOne {
+    width: 302px;
+    margin-right: 81px;
+  }
+
+  .DataGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .DataGroup h1 {
+    font-size: 13px;
+    line-height: 28px;
+    letter-spacing: 2.6px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .DataGroup h2 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+}
+@media (min-width: 1150px) {
+  .MoreDetailsWrapper {
+    padding: 74px 165px 74px 165px;
+  }
+  .SubGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+  }
+
+  .SubGroupOne {
+    width: 571px;
+    margin-right: 94px;
+    border-right: 1px solid rgb(48, 48, 48, 0.25);
+  }
+
+  .DataGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .DataGroup h1 {
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: 3px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .DataGroup h2 {
+    font-size: 56px;
+    font-weight: bold;
+  }
+}

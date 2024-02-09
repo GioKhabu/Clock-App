@@ -1,0 +1,35 @@
+.ClockWrapper {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ClockBackGround {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+.DataWrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 200px) {
+  .DataWrapper {
+    padding: 32px 25px 40px 26px;
+  }
+}
+@media (min-width: 620px) {
+  .DataWrapper {
+    padding: 80px 0 64px 64px;
+  }
+}
+@media (min-width: 1050px) {
+  .DataWrapper {
+    padding: 56px 165px 98px 165px;
+  }
+}
