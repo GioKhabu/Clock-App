@@ -19,9 +19,9 @@ function Quote() {
         </p>
         <h2 className={`${styles.Author}`}>{data && data[0].author}</h2>
       </div>
-      <button className={`${styles.RefreshWrapper}`} onClick={() => mutate()}>
+      <div className={`${styles.RefreshWrapper}`} onClick={() => mutate()}>
         <img src={Refresh} alt="" />
-      </button>
+      </div>
     </div>
   );
 }
