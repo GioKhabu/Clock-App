@@ -21,7 +21,10 @@ function Clock({ zone, country, city }) {
     width: window.innerWidth,
     height: window.innerHeight,
   });
-  const { data } = useSWR(zone && `http://worldtimeapi.org/api/timezone/${zone}`, fetcher);
+  const { data, error, isLoading } = useSWR(
+    zone && `https://worldtimeapi.org/api/timezone/${zone}`,
+    fetcher
+  );
 
   useEffect(() => {
     const handleResize = () => {
@@ -45,6 +48,15 @@ function Clock({ zone, country, city }) {
     setHours(newHours);
     setMinutes(newMinutes);
   }, [data]);
+
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error fetching data</div>;
+  }
 
   const isDaytime = hours > 4 && hours < 18;
   const isMobile = windowSize.width <= 767;

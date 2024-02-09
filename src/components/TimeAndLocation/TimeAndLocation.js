@@ -7,6 +7,9 @@ import ArrowDown from '../../assets/desktop/new_arrwo_down.svg';
 
 function TimeAndLocation({ openState, setOpenState, hours, minutes, dst, country, city }) {
   const [partOfDay, setPartOfDay] = React.useState('');
+  const [hoursN, setHoursN] = React.useState('');
+  const [minutesN, setMinutesN] = React.useState('');
+
   React.useEffect(() => {
     if ((hours > 5) & (hours < 11)) {
       setPartOfDay('Good Morgning');
@@ -16,7 +19,18 @@ function TimeAndLocation({ openState, setOpenState, hours, minutes, dst, country
       setPartOfDay('Good Evening');
     }
   }, [hours]);
-
+  React.useEffect(() => {
+    if (hours < 10) {
+      setHoursN(`0${hours}`);
+    } else {
+      setHoursN(`${hours}`);
+    }
+    if (minutes < 10) {
+      setMinutesN(`0${minutes}`);
+    } else {
+      setMinutesN(`${minutes}`);
+    }
+  }, [hours, minutes]);
   return (
     <section className={`${styles.TimeAndLocationWrapper}`}>
       <div className={`${styles.Group}`}>
@@ -26,12 +40,12 @@ function TimeAndLocation({ openState, setOpenState, hours, minutes, dst, country
           <h1 className={`${styles.TextToHide}`}>, It's Currently</h1>
         </div>
         <div className={`${styles.TimeWrapper}`}>
-          <h2>{hours&&`${hours}:${minutes}`}</h2>
+          <h2>{hours && `${hoursN}:${minutesN}`}</h2>
           {dst && <h3>dst</h3>}
         </div>
-        <h4 className={`${styles.Location}`}>{`In ${city}, ${country}`}</h4>
+        <h3 className={`${styles.Location}`}>{`In ${city}, ${country}`}</h3>
       </div>
-      <button
+      <div
         className={`${styles.MainButton}`}
         onClick={() => {
           setOpenState(!openState);
@@ -41,7 +55,7 @@ function TimeAndLocation({ openState, setOpenState, hours, minutes, dst, country
         <div>
           <img src={openState ? ArrowUp : ArrowDown} alt="" />
         </div>
-      </button>
+      </div>
     </section>
   );
 }
